@@ -1,8 +1,9 @@
-FROM debian:latest
+#FROM debian:latest
+FROM golang:latest
 
 RUN apt-get update && apt-get install -y \
     emacs24-nox \
-    golang-go \
+    # golang-go \
  && rm -rf /var/lib/apt/lists/*
 
 ENV TERM xterm-256color
