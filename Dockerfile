@@ -3,9 +3,10 @@ FROM debian:latest
 
 RUN apt-get update && apt-get install -y \
     emacs24-nox \
-    tmux \
     git \
+    make \
     man \
+    tmux \
     wget \
     # golang-go \
  && rm -rf /var/lib/apt/lists/*

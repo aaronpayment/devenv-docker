@@ -13,6 +13,8 @@
 (global-set-key (kbd "C-x <up>") 'windmove-up)              ; move to upper window
 (global-set-key (kbd "C-x <down>") 'windmove-down)          ; move to down window
 
+(global-linum-mode 1)
+
 (require 'go-mode-autoloads)
 (defun my-go-mode-hook ()
   ; Use goimports instead of go-fmt
