@@ -6,6 +6,9 @@
 (global-hl-line-mode 1)
 (transient-mark-mode t)
 
+(global-linum-mode 1)
+(setq linum-format "%d ")
+
 ;; extra key bindings
 (global-set-key [ ( meta g ) ] 'goto-line)
 (global-set-key (kbd "C-x <left>") 'windmove-left)          ; move to left windnow
@@ -13,8 +16,7 @@
 (global-set-key (kbd "C-x <up>") 'windmove-up)              ; move to upper window
 (global-set-key (kbd "C-x <down>") 'windmove-down)          ; move to down window
 
-(global-linum-mode 1)
-
+;; Go mode
 (require 'go-mode-autoloads)
 (defun my-go-mode-hook ()
   ; Use goimports instead of go-fmt
