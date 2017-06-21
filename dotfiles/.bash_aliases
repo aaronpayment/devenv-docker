@@ -1,0 +1,1 @@
+alias devenv='docker run --rm -ti -v $HOME/.ssh:/home/dev/.ssh -v `pwd`:/src -v `pwd`:/go/src -v /var/run/docker.sock:/var/run/docker.sock --entrypoint=bash aaronpayment/devenv:latest'
