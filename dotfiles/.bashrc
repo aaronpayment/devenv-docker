@@ -6,6 +6,7 @@ purple='\[\033[0;35m\]'
 default='\[\033[0m\]'
 export PS1="$purple$PS1$default"
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+for file in ~/.{bash_extra,bash_prompt,bash_exports,bash_aliases,bash_functions}; do
+    [ -r ${file} ] && source ${file}
+done
+unset file
