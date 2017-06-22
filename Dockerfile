@@ -31,6 +31,6 @@ RUN mkdir -p /repos && chown -R dev: /repos
 RUN mkdir -p /host_share && chown -R dev: /host_share
 
 WORKDIR /src
-#user dev
+user dev
 
 ENTRYPOINT ["emacs"]
