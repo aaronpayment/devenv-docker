@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     man \
     tmux \
     wget \
+    sudo \
     # golang-go \
  && rm -rf /var/lib/apt/lists/*
 
@@ -24,7 +25,7 @@ ENV PATH /usr/local/go/bin:$PATH
 ENV GOPATH /repos
 
 # Setup home environment
-RUN useradd -G staff dev
+RUN useradd -G staff,sudo dev && echo "dev:dev" | chpasswd
 RUN mkdir /home/dev && chown -R dev: /home/dev
 ENV HOME /home/dev
 WORKDIR /home/dev
